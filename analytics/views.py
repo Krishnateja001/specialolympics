@@ -21,6 +21,7 @@ def surveys(request):
         survey_true = [data_json[i].get('True',0) for i in school_state]
         survey_false =[data_json[i].get('False',0) for i in school_state]
 
+
         trace = [go.Bar(x= school_state,y = survey_true,name='Yes'),
                 go.Bar(x= school_state,y = survey_false,name='No')]
 
